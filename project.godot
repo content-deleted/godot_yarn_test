@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Godot-base-test"
+run/main_scene="res://scenes/YarnTestScene.tscn"
+config/features=PackedStringArray("4.1", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+NodeFindUtility="*res://addons/YarnSpinner-Godot/Runtime/NodeFindUtility.cs"
+DefaultActions="*res://addons/YarnSpinner-Godot/Runtime/Commands/DefaultActions.cs"
+
+[dotnet]
+
+project/assembly_name="Godot-base-test"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/YarnSpinner-Godot/plugin.cfg")
